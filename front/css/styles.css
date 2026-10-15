@@ -1,0 +1,348 @@
+/* ==========================================================================
+   Rolliepods - Global Stylesheet
+   ========================================================================== */
+
+/* --- Google Fonts Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap');
+
+/* --- Global Variables --- */
+:root {
+    --rollie-blue: #1A3482;
+    --soft-beige: #F6F1E7;
+    --pop-coral: #EB5A3B;
+    --lime-green: #A8C22E;
+    --white: #FFFFFF;
+}
+
+/* --- Base Reset & Typography --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    background-color: var(--soft-beige);
+    color: var(--rollie-blue);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+/* --- Navigation & Header --- */
+header {
+    background-color: var(--soft-beige);
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: "Fredoka", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--rollie-blue);
+}
+
+.logo span {
+    color: var(--pop-coral);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+nav ul li a:hover {
+    color: var(--pop-coral);
+}
+
+.auth-links {
+    color: var(--pop-coral);
+}
+
+/* --- Buttons --- */
+.btn {
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outline {
+    background: transparent;
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.btn-outline:hover {
+    background: var(--white);
+    color: var(--rollie-blue);
+}
+
+.btn-filled {
+    background: var(--soft-beige);
+    color: var(--rollie-blue);
+}
+
+.btn-coral {
+    background: var(--pop-coral);
+    color: var(--white);
+    font-size: 1.1rem;
+    padding: 1rem 3rem;
+}
+
+.btn-coral:hover {
+    background: #d14a2d;
+}
+
+/* --- Forms & Inputs --- */
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: var(--rollie-blue);
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 25px;
+    border: 2px solid var(--rollie-blue);
+    background: transparent;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+    color: var(--rollie-blue);
+    outline: none;
+}
+
+.form-group textarea {
+    border-radius: 15px;
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* --- Homepage specific --- */
+.hero {
+    background-color: var(--rollie-blue);
+    color: var(--white);
+    padding: 6rem 5%;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.feature-split {
+    display: flex;
+    background: var(--white);
+    min-height: 400px;
+}
+
+.feature-text {
+    flex: 1;
+    padding: 5rem;
+    background: var(--soft-beige);
+}
+
+.feature-text h2 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.feature-text h2 span {
+    color: var(--pop-coral);
+}
+
+/* --- Announcements & Cards --- */
+.announcements {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.announcements h2 {
+    font-size: 2.5rem;
+    color: var(--lime-green);
+    margin-bottom: 2rem;
+}
+
+.card-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 300px;
+    text-align: left;
+    border: 10px solid;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-coral { border-color: var(--pop-coral); }
+.card-blue { border-color: var(--rollie-blue); }
+.card-lime { border-color: var(--lime-green); }
+
+/* --- Login / Sign Up Page --- */
+.split-container {
+    display: flex;
+    min-height: 85vh;
+    background-color: var(--rollie-blue);
+}
+
+.split-branding {
+    flex: 1;
+    padding: 5rem;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.split-branding h2 {
+    font-size: 4rem;
+    line-height: 1.1;
+}
+
+.split-branding h2 span {
+    color: var(--pop-coral);
+}
+
+.split-form-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.form-card {
+    background: var(--soft-beige);
+    padding: 3rem;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 450px;
+    border: 2px solid var(--lime-green);
+    text-align: center;
+}
+
+.form-card p {
+    text-align: right;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.form-card p a {
+    color: var(--pop-coral);
+}
+
+/* --- Admin Dashboard Layout --- */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--pop-coral);
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sidebar .btn-nav {
+    background: var(--soft-beige);
+    color: var(--rollie-blue);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 25px;
+    font-weight: 700;
+    display: block;
+}
+
+.admin-main {
+    flex: 1;
+    background-color: var(--rollie-blue);
+    padding: 3rem;
+    color: var(--white);
+}
+
+.admin-main h1 {
+    text-align: right;
+    color: var(--lime-green);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.admin-panel {
+    background: var(--soft-beige);
+    border-radius: 30px;
+    padding: 3rem;
+    color: var(--rollie-blue);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--soft-beige);
+    padding: 3rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-info {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.footer-slogan h3 {
+    color: var(--lime-green);
+    line-height: 1.2;
+}
